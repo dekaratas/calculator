@@ -3,7 +3,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3B5249;
+  flex-direction: column;
+  /*background-color: #3B5249;*/
+  background: linear-gradient(to bottom right, #34252F, #519872);
+}
+
+#header {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 #text {
@@ -13,6 +21,7 @@ body {
   padding: 0px;
   margin: 0;
   margin-left: auto;
+  margin-right: 5px;;
 }
 
 #calculator {
@@ -67,6 +76,7 @@ body {
   background-color: #BEC5AD;
   width: 50px;
   height: 50px;
+  padding-bottom: 0px;
 }
 
 #operators {
@@ -95,9 +105,33 @@ button {
 button:hover {
   transition: 0.025s;
   opacity: 0.91;
-  font-size: 32px;
+  font-size: 38px;
 }
 
 button:active {
   transform: translateY(3px);
+}
+
+#bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#github {
+  font-family: 'Quicksand', sans-serif;
+  margin-right: 7px;
+  margin-top: 2px;
+}
+
+.imagecontainer {
+  margin-top: 0px;
+  transform: rotate(-360deg);
+  transition: 0.3s;
+}
+
+.imagecontainer:hover {
+  transform: rotate(360deg);
+  transition: 0.360s ease;
 }
