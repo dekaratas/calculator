@@ -8,7 +8,7 @@ body {
 #calculator {
   height: 250px;
   width: 500px;
-  background: #2E294E; 
+  background: #34252F; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@ body {
   height: 50px;
   width: 500px;
   margin-top: 10px;
-  border-bottom: 1px solid #FFD400;
+  border-bottom: 1px solid #519872;
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
@@ -44,14 +44,15 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
-  margin-right: 50px;
+  margin-right: 10px;
 }
 
 .numPad {
   text-align: center;
-  border: 1px solid #FFD400;
-  background-color: #FFD400;
-  width: 40px;
+  border: 1px solid;
+  background-color: #BEC5AD;
+  width: 50px;
+  height: 70px;
 }
 
 #operators {
@@ -63,9 +64,10 @@ body {
 
 .operatorPad {
   text-align: center;
-  border: 1px solid #FFD400;
-  background-color: #FFD400;
-  width: 40px;
+  border: 1px solid;
+  background-color: #A4B494;
+  width: 60px;
+  height: 70px;
 }
 
 button {
