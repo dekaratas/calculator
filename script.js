@@ -1,6 +1,9 @@
+// Global Query Selectors
 const numBtn = document.querySelectorAll(".numPad");
 let textCont = document.querySelector("#text");
 
+// Adjust content of display on each button press
+// Concatenates button's text content to display text
 numBtn.forEach(button => {
   button.addEventListener("click", event => {
     textCont.textContent += `${button.textContent}`;
