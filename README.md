@@ -15,4 +15,4 @@ Furthermore, my task consisted of:
 - implement a clear button
 
 While there is some functionality that I would like to add in the future I am overall satisfied with the final result. 
-Especially considering that styling & design is not my strong suit, I think it's not too horrible on the eyes.
+Especially considering that styling & design is not my strong suit, I think it's not too horrible on the eyes and another big step up from my last project.
