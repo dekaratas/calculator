@@ -14,18 +14,10 @@ body {
   margin-bottom: 15px;
 }
 
-#text {
-  color: black;
-  font-size: 40px;
-  font-family: 'Quicksand', sans-serif;
-  padding: 0px;
-  margin: 0;
-  margin-left: auto;
-  margin-right: 5px;;
-}
+
 
 #calculator {
-  height: 205px;
+  height: 240px;
   width: 500px;
   background: #34252F; 
   display: flex;
@@ -42,17 +34,33 @@ body {
   border-bottom: 1px solid #519872;
   display: flex;
   justify-content: center;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 #display #displayField {
-  height: 50px;
-  width: 450px;
+  height: 80px;
+  width: 470px;
   background-color: #EADEDA;
   box-shadow: 3px 5px 7px;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
+}
 
+#text {
+  color: black;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: auto;
+}
+
+#smallerText {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 #buttons {
@@ -99,12 +107,12 @@ button {
   font-size: 30px;
   font-family: 'Quicksand', sans-serif;
   box-shadow: 3px 5px 5px;
-
+  transition: 0.2s;
 }
 
 button:hover {
   transform: translateY(-3px);
-  transition: 0.025s;
+  transition: 0.2s;
   opacity: 0.91;
 }
 

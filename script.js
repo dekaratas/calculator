@@ -2,6 +2,7 @@
 const numBtn = document.querySelectorAll(".numPad");
 const opBtn = document.querySelectorAll(".operatorPad");
 let textCont = document.querySelector("#text");
+let smTextCont = document.querySelector("#smallerText");
 const addBtn = document.querySelector("#add");
 const subBtn = document.querySelector("#subtract");
 const multBtn = document.querySelector("#multiply");
@@ -20,9 +21,9 @@ let displayNum = 0;
 numBtn.forEach(button => {
   button.addEventListener("click", event => {
     if (button.textContent != "C" && button.textContent != "=") {
+//  if (op != "") {textCont.textContent = "";};
     textCont.textContent += `${button.textContent}`;}
     displayNum = parseInt(textCont.textContent);
-    console.log(displayNum);
   });
 });
 
@@ -33,6 +34,7 @@ opBtn.forEach(button => {
     a = displayNum;
     op = button.textContent;
     // Clear when operator is clicked
+    smTextCont.textContent += a + " " + op + " ";
     textCont.textContent = "";
   });
 });
@@ -42,8 +44,10 @@ eqBtn.addEventListener("click", () => {
     textCont.textContent = "Redditor moment!";
   } else {
   b = displayNum;
+  smTextCont.textContent += b + " ";
   textCont.textContent = operate(a, b, op);
   displayNum = parseInt(textCont.textContent);
+  smTextCont.textContent += "= " + displayNum + " | ";  
   
   // Result becomes the new a
   a=displayNum;
@@ -54,6 +58,7 @@ canBtn.addEventListener("click", () => {
   a = 0;
   b = 0;
   textCont.textContent = "";
+  smTextCont.textContent = "";
   op = "";
 })
 
