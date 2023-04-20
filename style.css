@@ -136,10 +136,10 @@ button:active {
 .imagecontainer {
   margin-top: 0px;
   transform: rotate(-360deg);
-  transition: 0.3s;
+  transition: 0.8s;
 }
 
 .imagecontainer:hover {
   transform: rotate(360deg);
-  transition: 0.360s ease;
+  transition: 0.8s ease;
 }
