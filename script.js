@@ -46,6 +46,8 @@ eqBtn.addEventListener("click", () => {
   b = displayNum;
   smTextCont.textContent += b + " ";
   textCont.textContent = operate(a, b, op);
+
+  
   displayNum = parseInt(textCont.textContent);
   smTextCont.textContent += "= " + displayNum + " | ";  
   
