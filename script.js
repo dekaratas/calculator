@@ -1,5 +1,6 @@
 // Global Query Selectors
 const numBtn = document.querySelectorAll(".numPad");
+const opBtn = document.querySelectorAll(".operatorPad");
 let textCont = document.querySelector("#text");
 const addBtn = document.querySelector("#add");
 const subBtn = document.querySelector("#subtract");
@@ -9,38 +10,55 @@ const eqBtn = document.querySelector("#equal");
 const canBtn = document.querySelector("#cancel");
 
 let a = 0;
-let op = "";
 let b = 0;
-
+let op = "";
+let displayNum = 0;
 
 // Adjust content of display on each button press
 // Concatenates button's text content to display text
+// Keeps saving the current Display's value to a variable
 numBtn.forEach(button => {
   button.addEventListener("click", event => {
     if (button.textContent != "C" && button.textContent != "=") {
     textCont.textContent += `${button.textContent}`;}
+    displayNum = parseInt(textCont.textContent);
+    console.log(displayNum);
   });
 });
 
-addBtn.addEventListener("click", () =>  {
-  a = parseInt(text.textContent);
-  op = "+";
-  textCont.textContent = "";
+// Stores current display's number in variable "a"
+// Stores chosen operator in variable "op"
+opBtn.forEach(button => {
+  button.addEventListener("click", event => {
+    a = displayNum;
+    op = button.textContent;
+    // Clear when operator is clicked
+    textCont.textContent = "";
+  });
 });
 
 eqBtn.addEventListener("click", () => {
-  b = parseInt(text.textContent);
-  switch(op) {
-    case "+":
-      textCont.textContent = a+b;
-      break;
-  }
-});
+  if (op == "/" && displayNum == 0) {
+    textCont.textContent = "Redditor moment!";
+  } else {
+  b = displayNum;
+  textCont.textContent = operate(a, b, op);
+  displayNum = parseInt(textCont.textContent);
+  
+  // Result becomes the new a
+  a=displayNum;
+}
+})
 
-
+canBtn.addEventListener("click", () => {
+  a = 0;
+  b = 0;
+  textCont.textContent = "";
+  op = "";
+})
 
 // Function declaration for the mathmatical operations
-function add(a,b ) {
+function add(a, b) {
   return a+b;
 }
 
@@ -56,3 +74,22 @@ function divide(a, b) {
   return a / b;
 }
 
+function operate(a, b, op) {
+  switch(op) {
+    case "+":
+      return add(a, b);
+      break;
+    case "-":
+      return subtract(a, b);
+      break;
+    case "X":
+      return multiply(a, b);
+      break;
+    case "/":
+      return divide(a, b);
+      break;
+    default:
+      return "Ya broke it!";
+  }
+
+}

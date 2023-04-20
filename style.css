@@ -103,9 +103,9 @@ button {
 }
 
 button:hover {
+  transform: translateY(-3px);
   transition: 0.025s;
   opacity: 0.91;
-  font-size: 38px;
 }
 
 button:active {
